@@ -21,5 +21,3 @@ INFO: [VRFC 10-311] analyzing module uart_top
 INFO: [VRFC 10-2458] undeclared symbol tfifo_wr, assumed default net type wire [C:/Users/Student/lab-0/Src_lab1/rtl/uart_top.v:98]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Student/lab-0/Src_lab1/tb/tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Student/lab-0/Src_lab1/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

@@ -13,5 +13,5 @@ C:/Users/Student/lab-0/Src_lab1/rtl/seq_rf.v,1790881948,verilog,,C:/Users/Studen
 C:/Users/Student/lab-0/Src_lab1/rtl/uart.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/uart_fifo.v,,uart,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/rtl/uart_fifo.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/uart_top.v,,uart_fifo,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/rtl/uart_top.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/tb/tb.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,uart_top,,,../../../../../rtl,,,,,
-C:/Users/Student/lab-0/Src_lab1/tb/model_uart.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/seq.v,,model_uart,,,../../../../../rtl,,,,,
+C:/Users/Student/lab-0/Src_lab1/tb/model_uart.v,1790887586,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/seq.v,,model_uart,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/tb/tb.v,1790881948,verilog,,,,tb,,,../../../../../rtl,,,,,
