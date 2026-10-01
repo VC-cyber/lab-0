@@ -42,7 +42,7 @@ module model_uart(/*AUTOARG*/
         ->evByte;
         if(rxData == 8'h72) 
             begin
-                $display ("%d %s Received byte (%s)", $stime, name, tmpData);
+                $display ("%d %s Received byte %02x (%s)", $stime, name, tmpData, tmpData);
                 tmpData[31:0]=32'h0; 
             end
         else 
