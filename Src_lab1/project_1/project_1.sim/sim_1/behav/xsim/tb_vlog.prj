@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../rtl" \
+"../../../../../rtl/basys3.v" \
+"../../../../../tb/model_uart.v" \
+"../../../../../rtl/seq.v" \
+"../../../../../rtl/seq_add.v" \
+"../../../../../rtl/seq_alu.v" \
+"../../../../../rtl/seq_mult.v" \
+"../../../../../rtl/seq_rf.v" \
+"../../../../../rtl/uart.v" \
+"../../../../../rtl/uart_fifo.v" \
+"../../../../../rtl/uart_top.v" \
+"../../../../../tb/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

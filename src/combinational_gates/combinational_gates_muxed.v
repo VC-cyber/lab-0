@@ -1,22 +1,24 @@
-/*
- * Module: Multiplexed combinational gates
- * 
- * Filename: combinational_gates_muxed.v
- * Version: 1.0
- *
- * Author: Cejo Konuparamban Lonappan
- *
- * Description: RTL for implementing eight combinational gates with the 
- * outputs of the gates multiplexed using an 8:1 Multiplexer. The gates
- * implemented are NAND, AND, NOR, OR, XOR, XNOR, NOT, and a non-inverting
- * buffer. 
- */
+///*
+// * Module: Multiplexed combinational gates
+// * 
+// * Filename: combinational_gates_muxed.v
+// * Version: 1.0
+// *
+// * Author: Cejo Konuparamban Lonappan
+// *
+// * Description: RTL for implementing eight combinational gates with the 
+// * outputs of the gates multiplexed using an 8:1 Multiplexer. The gates
+// * implemented are NAND, AND, NOR, OR, XOR, XNOR, NOT, and a non-inverting
+// * buffer. 
+// */
 
-module combinational_gates_muxed (led, sw);
+module combinational_gates_muxed (led, sw, an);
 
 // Input and output declaration
 input  [4:0] sw;  // Inputs sw[4:2] are unused
 output reg led; // Outputs led[7:1] are unused
+output reg an;
+
 
 // Declaring wires for the eight two inpuit basic gates	
 //                Output Select Input Number

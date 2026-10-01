@@ -19,12 +19,13 @@ reg [4:0] sw_T;
 
 // Outputs in the module to be tested will be port mapped to wire variables
 wire led_T;
+wire an_T;
 
 // Instantiation of the design module to be verified by the testbench
 // Use named portmapping to map inputs to regsiter variables and outputs to
 // wires
 combinational_gates_muxed UUT 	(.sw(sw_T), 
-				 .led(led_T));
+				 .led(led_T), .an(an_T));
 
 // Used for saving Value Change Dump (.vcd) file that records the waveforms of
 // the simulation. Not needed while using Xilinx ISIM simulator.
