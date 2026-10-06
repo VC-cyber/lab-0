@@ -4,20 +4,4 @@ Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 113aac3afe
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Users/Student/lab-0/Src_lab1/rtl/basys3.v" Line 1. Module basys3_default doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.model_uart(baud=1000000,name="UA...
-Compiling module xil_defaultlib.seq_rf_default
-Compiling module xil_defaultlib.seq_add_default
-Compiling module xil_defaultlib.seq_mult_default
-Compiling module xil_defaultlib.seq_alu_default
-Compiling module xil_defaultlib.seq_default
-Compiling module xil_defaultlib.uart_fifo
-Compiling module xil_defaultlib.uart
-Compiling module xil_defaultlib.uart_top_default
-Compiling module xil_defaultlib.basys3_default
-Compiling module xil_defaultlib.tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
