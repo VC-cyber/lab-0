@@ -6,6 +6,7 @@ module tb;
    reg       clk;
    reg       btnS;
    reg       btnR;
+   reg [7:0] file_data [1023:0];
    
    integer   i;
    
@@ -14,6 +15,7 @@ module tb;
    wire                 RsRx;                   // From model_uart0_ of model_uart.v
    wire                 RsTx;                   // From uut_ of basys3.v
    wire [7:0]           led;                    // From uut_ of basys3.v
+   
    // End of automatics
 
    initial
@@ -27,15 +29,19 @@ module tb;
         #1000 btnR = 0;
         #1500000;
         
-        tskRunPUSH(0,4);
-        tskRunPUSH(0,0);
-        tskRunPUSH(1,3);
-        tskRunMULT(0,1,2);
-        tskRunADD(2,0,3);
-        tskRunSEND(0);
-        tskRunSEND(1);
-        tskRunSEND(2);
-        tskRunSEND(3);
+//        tskRunPUSH(0,4);
+//        tskRunPUSH(0,0);
+//        tskRunPUSH(1,3);
+//        tskRunMULT(0,1,2);
+//        tskRunADD(2,0,3);
+//        tskRunSEND(0);
+//        tskRunSEND(1);
+//        tskRunSEND(2);
+//        tskRunSEND(3);
+        
+        
+        $readmemb("seq.code", file_data);
+        runTests();
         
         #1000;        
         $finish;
@@ -114,6 +120,46 @@ module tb;
          tskRunInst(inst);
       end
    endtask //
+   
+   task runTests;
+    reg [7:0] num;
+    reg [1:0] op_code;
+    reg [1:0] ra;
+    reg [1:0] rb;
+    reg [1:0] rc;
+    reg [3:0] comb;
+    reg [9:0] count;
+    begin
+        num = file_data[0];
+        count = 1;
+        repeat(num)
+            begin
+            op_code = file_data[count][7:6];
+            ra = file_data[count][5:4];
+            rb = file_data[count][3:2];
+            rc = file_data[count][1:0];
+            comb = file_data[count][3:0];
+            if(op_code == 2'b00)
+                begin
+                    tskRunPUSH(ra, comb); 
+                end
+            if(op_code == 2'b01)
+                begin
+                    tskRunADD(ra,rb,rc);
+                end
+            if(op_code == 2'b10)
+                begin
+                    tskRunMULT(ra,rb,rc);
+                end
+            if(op_code == 2'b11)
+                begin
+                    tskRunSEND(ra);
+                end
+            count = count + 1;
+                                                            
+            end
+    end
+    endtask //
 
    always @ (posedge clk)
      if (uut_.inst_vld)
