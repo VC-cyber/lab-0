@@ -40,14 +40,17 @@ module model_uart(/*AUTOARG*/
              rxData[7:0] = {RX,rxData[7:1]};
           end
         ->evByte;
-        if(rxData == 8'h72) 
+        if(rxData == 8'h72 || rxData == 8'h0A) 
             begin
-                $display ("%d %s Received byte %02x (%s)", $stime, name, tmpData, tmpData);
-                tmpData[31:0]=32'h0; 
+                if(rxData == 8'h72)
+                    begin
+                        $display ("Data %s", tmpData);
+                        tmpData[31:0]=32'h0; 
+                    end 
             end
         else 
             begin
-                tmpData[31:0] = {rxData, tmpData[31:8]};
+                tmpData[31:0] = {tmpData[23:0], rxData};
             end
      end
      
