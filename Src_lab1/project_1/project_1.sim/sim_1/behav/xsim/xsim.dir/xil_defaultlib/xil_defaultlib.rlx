@@ -3,7 +3,7 @@
 Jun 14 2018
 20:41:02
 C:/Users/Student/lab-0/Src_lab1/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-C:/Users/Student/lab-0/Src_lab1/rtl/basys3.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/tb/model_uart.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,basys3,,,../../../../../rtl,,,,,
+C:/Users/Student/lab-0/Src_lab1/rtl/basys3.v,1791492628,verilog,,C:/Users/Student/lab-0/Src_lab1/tb/model_uart.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,basys3,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/rtl/seq.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/seq_add.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,seq,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/rtl/seq_add.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/seq_alu.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,seq_add,,,../../../../../rtl,,,,,
 C:/Users/Student/lab-0/Src_lab1/rtl/seq_alu.v,1790881948,verilog,,C:/Users/Student/lab-0/Src_lab1/rtl/seq_mult.v,C:/Users/Student/lab-0/Src_lab1/rtl/seq_definitions.v,seq_alu,,,../../../../../rtl,,,,,
