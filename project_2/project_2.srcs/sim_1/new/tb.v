@@ -24,7 +24,7 @@ module tb;
 reg [11:0] D_in;
 wire [7:0] out;
 
-FPCVT uut (.num12(D_in), .num8(out));
+fpcvt uut (.num12(D_in), .num8(out));
 
 initial 
 begin
