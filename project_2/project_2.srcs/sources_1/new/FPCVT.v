@@ -25,16 +25,11 @@ module FPCVT(
     output reg [7:0] num8     // Fixed: Added reg so it can be assigned in always block
 ); 
 
-reg numE = 0; 
-reg [2:0] e; 
-reg s = 0; 
+reg [3:0] numE = 0; 
+reg [2:0] e = 0; 
+reg s; 
 reg [3:0] f;
-reg [11:0] temp_num12;  
-
-initial
-    begin
-        temp_num12 = num12;
-    end
+reg [11:0] temp_num12 = 0;  
 
 task sBit; 
     begin 
@@ -87,8 +82,12 @@ task sigBits;
     end
 endtask
 
-always @ (negedge num12)
+always @ (*)
     begin
+        temp_num12 = num12;
+        numE = 0;
+        s = 0;
+        
         sBit();
         eBits();
         sigBits();
