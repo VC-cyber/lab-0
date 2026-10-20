@@ -31,6 +31,11 @@ reg s;
 reg [3:0] f;
 reg [11:0] temp_num12 = 0;  
 
+initial 
+begin
+    temp_num12 = num12;
+end
+
 task sBit; 
     begin 
         if(temp_num12[11] == 1)
@@ -84,10 +89,6 @@ endtask
 
 always @ (*)
     begin
-        temp_num12 = num12;
-        numE = 0;
-        s = 0;
-        
         sBit();
         eBits();
         sigBits();
