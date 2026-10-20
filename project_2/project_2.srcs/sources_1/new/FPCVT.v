@@ -21,8 +21,10 @@
 
 
 module fpcvt( 
-    input  [11:0] num12, // Fixed: Moved bit-width before variable name
-    output reg [7:0] num8     // Fixed: Added reg so it can be assigned in always block
+    input  [11:0] D,
+    output reg S,
+    output reg [2:0] E,
+    output reg [3:0] F
 ); 
 
 reg [3:0] numE = 0; 
@@ -84,7 +86,7 @@ endtask
 
 always @ (*)
     begin
-        temp_num12 = num12;
+        temp_num12 = D;
         numE = 0;
         e = 0;
         s = 0;
@@ -92,7 +94,9 @@ always @ (*)
         sBit();
         eBits();
         sigBits();
-        num8 = {s,e,f};
+        S = s;
+        E = e;
+        F = f;
     end
 
 endmodule
