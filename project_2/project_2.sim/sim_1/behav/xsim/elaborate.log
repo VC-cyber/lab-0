@@ -3,5 +3,6 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3c1e1add6db84925bd15d3d98cb873bc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-426] cannot find port num8 on this module [C:/Users/Student/lab-0/project_2/project_2.srcs/sim_1/new/tb.v:27]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 1 for port num8 [C:/Users/Student/lab-0/project_2/project_2.srcs/sim_1/new/tb.v:27]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

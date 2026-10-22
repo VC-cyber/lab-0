@@ -21,13 +21,11 @@
 
 
 module fpcvt( 
-    input  [11:0] D,
-    output reg S,
-    output reg [2:0] E,
-    output reg [3:0] F
+    input  [11:0] num12,
+    output reg num8
 ); 
 
-reg [3:0] numE = 0; 
+reg numE = 0; 
 reg [2:0] e; 
 reg s; 
 reg [3:0] f;
@@ -86,7 +84,7 @@ endtask
 
 always @ (*)
     begin
-        temp_num12 = D;
+        temp_num12 = num12;
         numE = 0;
         e = 0;
         s = 0;
@@ -94,9 +92,7 @@ always @ (*)
         sBit();
         eBits();
         sigBits();
-        S = s;
-        E = e;
-        F = f;
+        num8 = {s,e,f};
     end
 
 endmodule
