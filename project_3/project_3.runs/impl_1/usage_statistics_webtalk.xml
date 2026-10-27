@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Oct 27 13:33:02 2026'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Oct 27 13:44:05 2026'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2258646" description="" />
-  <keyValuePair key="date_generated" value="Tue Oct 27 13:33:02 2026" description="" />
+  <keyValuePair key="date_generated" value="Tue Oct 27 13:44:05 2026" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2018.2 (64-bit)" description="" />
   <keyValuePair key="project_id" value="07bb6da5a4e6419c9da1aa2bff204c82" description="" />
-  <keyValuePair key="project_iteration" value="1" description="" />
+  <keyValuePair key="project_iteration" value="2" description="" />
   <keyValuePair key="random_id" value="02f6a360-9d7b-4859-bf1a-2c10cd733453" description="" />
   <keyValuePair key="registration_id" value="211888400_0_0_236" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -215,12 +215,12 @@
    <keyValuePair key="slice_registers_fixed" value="0" description="" />
    <keyValuePair key="slice_registers_used" value="63" description="" />
    <keyValuePair key="slice_registers_util_percentage" value="0.15" description="" />
-   <keyValuePair key="slice_used" value="75" description="" />
-   <keyValuePair key="slice_util_percentage" value="0.92" description="" />
+   <keyValuePair key="slice_used" value="77" description="" />
+   <keyValuePair key="slice_util_percentage" value="0.94" description="" />
    <keyValuePair key="slicel_fixed" value="0" description="" />
-   <keyValuePair key="slicel_used" value="56" description="" />
+   <keyValuePair key="slicel_used" value="54" description="" />
    <keyValuePair key="slicem_fixed" value="0" description="" />
-   <keyValuePair key="slicem_used" value="19" description="" />
+   <keyValuePair key="slicem_used" value="23" description="" />
    <keyValuePair key="unique_control_sets_used" value="2" description="" />
    <keyValuePair key="using_o5_and_o6_fixed" value="2" description="" />
    <keyValuePair key="using_o5_and_o6_used" value="45" description="" />
@@ -270,7 +270,7 @@
  </section>
  <section name="router" level="1" order="5" description="">
   <section name="usage" level="2" order="1" description="">
-   <keyValuePair key="actual_expansions" value="173884" description="" />
+   <keyValuePair key="actual_expansions" value="165360" description="" />
    <keyValuePair key="bogomips" value="0" description="" />
    <keyValuePair key="bram18" value="0" description="" />
    <keyValuePair key="bram36" value="0" description="" />
@@ -279,7 +279,7 @@
    <keyValuePair key="ctrls" value="2" description="" />
    <keyValuePair key="dsp" value="0" description="" />
    <keyValuePair key="effort" value="2" description="" />
-   <keyValuePair key="estimated_expansions" value="176154" description="" />
+   <keyValuePair key="estimated_expansions" value="171564" description="" />
    <keyValuePair key="ff" value="63" description="" />
    <keyValuePair key="global_clocks" value="1" description="" />
    <keyValuePair key="high_fanout_nets" value="0" description="" />
@@ -333,10 +333,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:23s" description="" />
+   <keyValuePair key="elapsed" value="00:00:24s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="502.938MB" description="" />
-   <keyValuePair key="memory_peak" value="748.191MB" description="" />
+   <keyValuePair key="memory_gain" value="503.254MB" description="" />
+   <keyValuePair key="memory_peak" value="748.238MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="7" description="">
@@ -376,11 +376,12 @@
    <keyValuePair key="abstractfileview_close" value="1" description="" />
    <keyValuePair key="addsrcwizard_specify_hdl_netlist_block_design" value="1" description="" />
    <keyValuePair key="basedialog_cancel" value="1" description="" />
-   <keyValuePair key="basedialog_ok" value="10" description="" />
+   <keyValuePair key="basedialog_ok" value="12" description="" />
+   <keyValuePair key="cmdmsgdialog_ok" value="1" description="" />
    <keyValuePair key="constraintschooserpanel_add_files" value="1" description="" />
    <keyValuePair key="createsrcfiledialog_file_name" value="3" description="" />
    <keyValuePair key="filesetpanel_file_set_panel_tree" value="26" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="5" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="9" description="" />
    <keyValuePair key="fpgachooser_family" value="1" description="" />
    <keyValuePair key="fpgachooser_fpga_table" value="1" description="" />
    <keyValuePair key="fpgachooser_package" value="1" description="" />
@@ -388,11 +389,14 @@
    <keyValuePair key="gettingstartedview_create_new_project" value="1" description="" />
    <keyValuePair key="hcodeeditor_search_text_combo_box" value="2" description="" />
    <keyValuePair key="pacommandnames_add_sources" value="3" description="" />
+   <keyValuePair key="pacommandnames_auto_connect_target" value="1" description="" />
    <keyValuePair key="pacommandnames_auto_update_hier" value="5" description="" />
-   <keyValuePair key="pacommandnames_run_bitgen" value="2" description="" />
+   <keyValuePair key="pacommandnames_run_bitgen" value="3" description="" />
    <keyValuePair key="pacommandnames_simulation_reset" value="4" description="" />
    <keyValuePair key="pacommandnames_simulation_run" value="4" description="" />
    <keyValuePair key="pacommandnames_simulation_run_behavioral" value="1" description="" />
+   <keyValuePair key="programdebugtab_program_device" value="3" description="" />
+   <keyValuePair key="programfpgadialog_program" value="3" description="" />
    <keyValuePair key="progressdialog_cancel" value="2" description="" />
    <keyValuePair key="projectnamechooser_choose_project_location" value="1" description="" />
    <keyValuePair key="rdicommands_delete" value="1" description="" />
@@ -404,11 +408,15 @@
   </section>
   <section name="java_command_handlers" level="2" order="2" description="">
    <keyValuePair key="addsources" value="3" description="" />
+   <keyValuePair key="autoconnecttarget" value="1" description="" />
    <keyValuePair key="editdelete" value="1" description="" />
+   <keyValuePair key="launchprogramfpga" value="3" description="" />
    <keyValuePair key="newproject" value="1" description="" />
-   <keyValuePair key="runbitgen" value="2" description="" />
-   <keyValuePair key="runimplementation" value="2" description="" />
-   <keyValuePair key="runsynthesis" value="4" description="" />
+   <keyValuePair key="openhardwaremanager" value="1" description="" />
+   <keyValuePair key="openrecenttarget" value="1" description="" />
+   <keyValuePair key="runbitgen" value="3" description="" />
+   <keyValuePair key="runimplementation" value="3" description="" />
+   <keyValuePair key="runsynthesis" value="5" description="" />
    <keyValuePair key="showview" value="1" description="" />
    <keyValuePair key="simulationrun" value="1" description="" />
   </section>

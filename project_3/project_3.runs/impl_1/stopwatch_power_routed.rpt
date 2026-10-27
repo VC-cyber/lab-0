@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Oct 27 13:32:14 2026
+| Date             : Tue Oct 27 13:43:15 2026
 | Host             : CS152A-08 running 64-bit major release  (build 9200)
 | Command          : report_power -file stopwatch_power_routed.rpt -pb stopwatch_power_summary_routed.pb -rpx stopwatch_power_routed.rpx
 | Design           : stopwatch
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.376       |
+| Total On-Chip Power (W)  | 10.323       |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.230       |
-| Device Static (W)        | 0.146        |
+| Dynamic (W)              | 10.178       |
+| Device Static (W)        | 0.145        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 33.1         |
-| Junction Temperature (C) | 76.9         |
+| Max Ambient (C)          | 33.4         |
+| Junction Temperature (C) | 76.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.219 |      358 |       --- |             --- |
+| Slice Logic    |     0.220 |      358 |       --- |             --- |
 |   LUT as Logic |     0.161 |      195 |     20800 |            0.94 |
 |   CARRY4       |     0.035 |       52 |      8150 |            0.64 |
 |   Register     |     0.018 |       63 |     41600 |            0.15 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.211 |      250 |       --- |             --- |
-| I/O            |     9.800 |       13 |       106 |           12.26 |
-| Static Power   |     0.146 |          |           |                 |
-| Total          |    10.376 |          |           |                 |
+| Signals        |     0.201 |      250 |       --- |             --- |
+| I/O            |     9.757 |       13 |       106 |           12.26 |
+| Static Power   |     0.145 |          |           |                 |
+| Total          |    10.323 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.504 |       0.434 |      0.070 |
-| Vccaux    |       1.800 |     0.378 |       0.359 |      0.019 |
-| Vcco33    |       3.300 |     2.774 |       2.773 |      0.001 |
+| Vccint    |       1.000 |     0.494 |       0.425 |      0.069 |
+| Vccaux    |       1.800 |     0.377 |       0.357 |      0.019 |
+| Vcco33    |       3.300 |     2.762 |       2.761 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +138,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| stopwatch |    10.230 |
+| stopwatch |    10.178 |
 +-----------+-----------+
 
 
