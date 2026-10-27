@@ -22,10 +22,10 @@
 
 module fpcvt( 
     input  [11:0] num12,
-    output reg num8
+    output reg [7:0] num8
 ); 
 
-reg numE = 0; 
+reg [3:0] numE = 0; 
 reg [2:0] e; 
 reg s; 
 reg [3:0] f;

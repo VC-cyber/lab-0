@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct 27 13:30:16 2026
+# Process ID: 10096
+# Current directory: C:/Users/Student/lab-0/project_3/project_3.runs/synth_1
+# Command line: vivado.exe -log stopwatch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stopwatch.tcl
+# Log file: C:/Users/Student/lab-0/project_3/project_3.runs/synth_1/stopwatch.vds
+# Journal file: C:/Users/Student/lab-0/project_3/project_3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source stopwatch.tcl -notrace

@@ -37,6 +37,22 @@ begin
     D_in = 12'b011111111111; 
     #10;
     $display("%b\t", out);
+    
+    D_in = 12'b111111111111; 
+    #10;
+    $display("%b\t", out);
+
+    D_in = 12'b100000000000; 
+    #10;
+    $display("%b\t", out);
+    
+     D_in = 12'b100010100100; 
+    #10;
+    $display("%b\t", out);
+    
+    D_in = 12'b0000000100100; 
+    #10;
+    $display("%b\t", out);           
  end  
 
 endmodule
