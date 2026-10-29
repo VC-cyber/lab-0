@@ -22,23 +22,27 @@
 
 module stopwatch(
          input clk, // 100 Mhz clock source on Basys 3 FPGA
-        input reset, // reset
+        input btnR, // reset
+        input min_or_sec, // reset
+        input adjust, // reset
         output reg [3:0] an, // anode signals of the 7-segment LED display
         output reg [6:0] seg// cathode patterns of the 7-segment LED display
         );
         reg [26:0] one_second_counter; // counter for generating 1 second clock enable
         wire one_second_enable;// one second enable for counting numbers
+        wire faster_second_enable;
         reg [15:0] displayed_number; // counting number to be displayed
         reg [3:0] LED_BCD;
         reg [19:0] refresh_counter; // 20-bit for creating 10.5ms refresh period or 380Hz refresh rate
                  // the first 2 MSB bits for creating 4 LED-activating signals with 2.6ms digit period
+        reg [19:0] faster_counter;
         wire [1:0] LED_activating_counter; 
                      // count     0    ->  1  ->  2  ->  3
                   // activates    LED1    LED2   LED3   LED4
                  // and repeat
-        always @(posedge clk or posedge reset)
+        always @(posedge clk or posedge btnR)
         begin
-            if(reset==1)
+            if(btnR==1)
                 one_second_counter <= 0;
             else begin
                 if(one_second_counter>=99999999) 
@@ -48,19 +52,52 @@ module stopwatch(
             end
         end 
         assign one_second_enable = (one_second_counter==99999999)?1:0;
-        always @(posedge clk or posedge reset)
+        assign faster_second_enable = (one_second_counter==99999999 || one_second_counter==50000000)?1:0;
+        
+        always @(posedge clk or posedge btnR)
         begin
-            if(reset==1)
-                displayed_number <= 0;
-            else if(one_second_enable==1)
-                displayed_number <= displayed_number + 1;
-        end
-        always @(posedge clk or posedge reset)
-        begin 
-            if(reset==1)
-                refresh_counter <= 0;
+        
+        if(adjust == 1)
+        begin
+        if(faster_second_enable==1 && min_or_sec == 1)
+            displayed_number <= displayed_number+60;
+            
+        else if(faster_second_enable==1)
+            begin
+            if(displayed_number%60 == 59)
+                displayed_number <= displayed_number - 59;
             else
-                refresh_counter <= refresh_counter + 1;
+                displayed_number <= displayed_number + 1;
+                
+            end
+        end
+        
+        else
+            begin
+                if(btnR==1)
+                    displayed_number <= 0;
+                    
+                else if(one_second_enable==1)
+                    displayed_number <= displayed_number + 1;
+                        
+            end
+        end
+        
+        always @(posedge clk or posedge btnR)
+        begin 
+            if(btnR==1)
+            begin
+                refresh_counter <= 0;
+                faster_counter <= 0;
+            end
+            else
+            begin
+                if(adjust == 1 && faster_second_enable == 1)
+                    refresh_counter <= refresh_counter+1;
+                else if(adjust == 0)
+                    refresh_counter <= refresh_counter + 1;
+            end
+                
         end 
         assign LED_activating_counter = refresh_counter[19:18];
         // anode activating signals for 4 LEDs, digit period of 2.6ms
@@ -71,25 +108,25 @@ module stopwatch(
             2'b00: begin
                 an = 4'b0111; 
                 // activate LED1 and Deactivate LED2, LED3, LED4
-                LED_BCD = displayed_number/1000;
+                LED_BCD = displayed_number/600;
                 // the first digit of the 16-bit number
                   end
             2'b01: begin
                 an = 4'b1011; 
                 // activate LED2 and Deactivate LED1, LED3, LED4
-                LED_BCD = (displayed_number % 1000)/100;
+                LED_BCD = (displayed_number % 600)/60;
                 // the second digit of the 16-bit number
                   end
             2'b10: begin
                 an = 4'b1101; 
                 // activate LED3 and Deactivate LED2, LED1, LED4
-                LED_BCD = ((displayed_number % 1000)%100)/10;
+                LED_BCD = ((displayed_number % 600)%60)/10;
                 // the third digit of the 16-bit number
                     end
             2'b11: begin
                 an = 4'b1110; 
                 // activate LED4 and Deactivate LED2, LED3, LED1
-                LED_BCD = ((displayed_number % 1000)%100)%10;
+                LED_BCD = ((displayed_number % 600)%60)%10;
                 // the fourth digit of the 16-bit number    
                    end
             endcase
@@ -102,7 +139,7 @@ module stopwatch(
             4'b0001: seg = 7'b1111001; // "1" 
             4'b0010: seg = 7'b0100100; // "2" 
             4'b0011: seg = 7'b0110000; // "3" 
-            4'b0100: seg = 7'b0110001; // "4" 
+            4'b0100: seg = 7'b0011001; // "4"
             4'b0101: seg = 7'b0010010; // "5" 
             4'b0110: seg = 7'b0000010; // "6" 
             4'b0111: seg = 7'b1111000; // "7" 
@@ -111,6 +148,7 @@ module stopwatch(
             default: seg = 7'b1000000; // "0"
             endcase
         end
+        
         
         
 endmodule

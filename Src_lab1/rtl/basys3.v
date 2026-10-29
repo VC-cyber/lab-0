@@ -14,11 +14,11 @@ module basys3 (/*AUTOARG*/
    // Misc.
    input  [7:0] sw;
    output [7:0] led;
-   input        btnS;                 // single-step instruction
+                // 100MHz   input        btnS;                 // single-step instruction
    input        btnR;                 // arst
    
    // Logic
-   input        clk;                  // 100MHz
+   input        clk;  
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)

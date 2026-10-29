@@ -1,0 +1,1 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Student/lab-0/project_3/project_3.srcs/constrs_1/imports/src/Basys-3-Master.xdc rfile:../../../../../project_3.srcs/constrs_1/imports/src/Basys-3-Master.xdc id:1} [current_design]
