@@ -23,6 +23,7 @@
 module stopwatch(
          input clk, // 100 Mhz clock source on Basys 3 FPGA
         input btnR, // reset
+        input btnL,
         input min_or_sec, // reset
         input adjust, // reset
         output reg [3:0] an, // anode signals of the 7-segment LED display
@@ -31,6 +32,8 @@ module stopwatch(
         reg [26:0] one_second_counter; // counter for generating 1 second clock enable
         wire one_second_enable;// one second enable for counting numbers
         wire faster_second_enable;
+        wire blink;
+        reg paused = 0;
         reg [15:0] displayed_number; // counting number to be displayed
         reg [3:0] LED_BCD;
         reg [19:0] refresh_counter; // 20-bit for creating 10.5ms refresh period or 380Hz refresh rate
@@ -40,6 +43,12 @@ module stopwatch(
                      // count     0    ->  1  ->  2  ->  3
                   // activates    LED1    LED2   LED3   LED4
                  // and repeat
+                 
+        always @(posedge btnL)
+        begin
+            paused = !paused;
+        end
+        
         always @(posedge clk or posedge btnR)
         begin
             if(btnR==1)
@@ -47,55 +56,51 @@ module stopwatch(
             else begin
                 if(one_second_counter>=99999999) 
                      one_second_counter <= 0;
-                else
+                else if(!paused)
                     one_second_counter <= one_second_counter + 1;
             end
         end 
         assign one_second_enable = (one_second_counter==99999999)?1:0;
-        assign faster_second_enable = (one_second_counter==99999999 || one_second_counter==50000000)?1:0;
+        assign faster_second_enable = (one_second_counter==99999999 || one_second_counter==49999999)?1:0;
+        assign blink = (one_second_counter < 25000000 || (one_second_counter > 50000000 && one_second_counter < 75000000));
         
         always @(posedge clk or posedge btnR)
         begin
         
-        if(adjust == 1)
+        if(btnR)
+            displayed_number <= 0;
+        
+        else if(adjust)
         begin
-        if(faster_second_enable==1 && min_or_sec == 1)
-            displayed_number <= displayed_number+60;
-            
-        else if(faster_second_enable==1)
-            begin
-            if(displayed_number%60 == 59)
-                displayed_number <= displayed_number - 59;
-            else
-                displayed_number <= displayed_number + 1;
+            if(faster_second_enable==1 && min_or_sec == 1)
+                displayed_number <= displayed_number+60;
                 
-            end
+            else if(faster_second_enable==1)
+                begin
+                if(displayed_number%60 == 59)
+                    displayed_number <= displayed_number - 59;
+                else
+                    displayed_number <= displayed_number + 1;
+                    
+                end
         end
         
         else
-            begin
-                if(btnR==1)
-                    displayed_number <= 0;
-                    
-                else if(one_second_enable==1)
-                    displayed_number <= displayed_number + 1;
-                        
-            end
+        begin
+            if(one_second_enable==1)
+                displayed_number <= displayed_number + 1;
         end
+     end
         
         always @(posedge clk or posedge btnR)
         begin 
             if(btnR==1)
             begin
                 refresh_counter <= 0;
-                faster_counter <= 0;
             end
             else
             begin
-                if(adjust == 1 && faster_second_enable == 1)
-                    refresh_counter <= refresh_counter+1;
-                else if(adjust == 0)
-                    refresh_counter <= refresh_counter + 1;
+                refresh_counter <= refresh_counter + 1;
             end
                 
         end 
@@ -104,6 +109,10 @@ module stopwatch(
         // decoder to generate anode signals 
         always @(*)
         begin
+            if(adjust && blink)
+                an = 4'b1111;
+            else
+            begin
             case(LED_activating_counter)
             2'b00: begin
                 an = 4'b0111; 
@@ -130,6 +139,8 @@ module stopwatch(
                 // the fourth digit of the 16-bit number    
                    end
             endcase
+            end
+            
         end
         // Cathode patterns of the 7-segment LED display 
         always @(*)
