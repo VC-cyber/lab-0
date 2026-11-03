@@ -21,9 +21,9 @@
 
 
 module stopwatch(
-         input clk, // 100 Mhz clock source on Basys 3 FPGA
+        input clk, // 100 Mhz clock source on Basys 3 FPGA
+        input btnD,
         input btnR, // reset
-        input btnL,
         input min_or_sec, // reset
         input adjust, // reset
         output reg [3:0] an, // anode signals of the 7-segment LED display
@@ -44,16 +44,28 @@ module stopwatch(
                   // activates    LED1    LED2   LED3   LED4
                  // and repeat
                  
-        always @(posedge btnL)
-        begin
-            paused = !paused;
-        end
+       reg btnD_delayed;
+       wire btnD_pulse;
+                 
+         always @(posedge clk) 
+         begin
+             btnD_delayed <= btnD; 
+         end
+         assign btnD_pulse = (btnD && !btnD_delayed);
+          
+         always @(posedge clk)
+         begin
+         if (btnD_pulse) begin
+                 paused = !paused;
+             end
+         end
         
         always @(posedge clk or posedge btnR)
         begin
             if(btnR==1)
                 one_second_counter <= 0;
-            else begin
+            else 
+            begin
                 if(one_second_counter>=99999999) 
                      one_second_counter <= 0;
                 else if(!paused)
