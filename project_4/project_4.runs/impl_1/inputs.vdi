@@ -1,0 +1,386 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 17 13:17:33 2026
+# Process ID: 1884
+# Current directory: C:/Users/Student/lab-0/project_4/project_4.runs/impl_1
+# Command line: vivado.exe -log inputs.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source inputs.tcl -notrace
+# Log file: C:/Users/Student/lab-0/project_4/project_4.runs/impl_1/inputs.vdi
+# Journal file: C:/Users/Student/lab-0/project_4/project_4.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source inputs.tcl -notrace
+Command: link_design -top inputs -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'col[3]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'col[2]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'col[1]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'col[0]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[3]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[2]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[1]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[0]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 21 Warnings, 21 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 555.707 ; gain = 306.840
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[0] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[1] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[2] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[3] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[4] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[5] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[6] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[7] expects both input and output buffering but the buffers are incomplete.
+INFO: [Project 1-461] DRC finished with 0 Errors, 8 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.556 . Memory (MB): peak = 568.891 ; gain = 13.184
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1c3cf1912
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1124.578 ; gain = 555.688
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1a31fb84d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a31fb84d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1e109d7fb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 42 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1e109d7fb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 15aadb6da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 15aadb6da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1124.578 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 15aadb6da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1124.578 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 15aadb6da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1124.578 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 15aadb6da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 29 Warnings, 21 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1124.578 ; gain = 568.871
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1124.578 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/lab-0/project_4/project_4.runs/impl_1/inputs_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file inputs_drc_opted.rpt -pb inputs_drc_opted.pb -rpx inputs_drc_opted.rpx
+Command: report_drc -file inputs_drc_opted.rpt -pb inputs_drc_opted.pb -rpx inputs_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Student/lab-0/project_4/project_4.runs/impl_1/inputs_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[0] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[1] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[2] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[3] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[4] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[5] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[6] expects both input and output buffering but the buffers are incomplete.
+WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port JA[7] expects both input and output buffering but the buffers are incomplete.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 8 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.578 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 125c7b0c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1124.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.578 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (42) is greater than number of available sites (32).
+The following are banks with available pins: 
+ IO Group: 1 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 32 sites available on device, but needs 42 sites.
+	Term: board1[0]
+	Term: board1[1]
+	Term: board1[2]
+	Term: board1[3]
+	Term: board1[4]
+	Term: board1[5]
+	Term: board2[0]
+	Term: board2[1]
+	Term: board2[2]
+	Term: board2[3]
+	Term: board2[4]
+	Term: board2[5]
+	Term: board3[0]
+	Term: board3[1]
+	Term: board3[2]
+	Term: board3[3]
+	Term: board3[4]
+	Term: board3[5]
+	Term: board4[0]
+	Term: board4[1]
+	Term: board4[2]
+	Term: board4[3]
+	Term: board4[4]
+	Term: board4[5]
+	Term: board5[0]
+	Term: board5[1]
+	Term: board5[2]
+	Term: board5[3]
+	Term: board5[4]
+	Term: board5[5]
+	Term: hole1[0]
+	Term: hole1[1]
+	Term: hole1[2]
+	Term: hole1[3]
+	Term: hole1[4]
+	Term: hole1[5]
+	Term: hole2[0]
+	Term: hole2[1]
+	Term: hole2[2]
+	Term: hole2[3]
+	Term: hole2[4]
+	Term: hole2[5]
+
+
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (50) is greater than number of available sites (32).
+The following are banks with available pins: 
+ IO Group: 1 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 32 sites available on device, but needs 42 sites.
+	Term: board1[0]
+	Term: board1[1]
+	Term: board1[2]
+	Term: board1[3]
+	Term: board1[4]
+	Term: board1[5]
+	Term: board2[0]
+	Term: board2[1]
+	Term: board2[2]
+	Term: board2[3]
+	Term: board2[4]
+	Term: board2[5]
+	Term: board3[0]
+	Term: board3[1]
+	Term: board3[2]
+	Term: board3[3]
+	Term: board3[4]
+	Term: board3[5]
+	Term: board4[0]
+	Term: board4[1]
+	Term: board4[2]
+	Term: board4[3]
+	Term: board4[4]
+	Term: board4[5]
+	Term: board5[0]
+	Term: board5[1]
+	Term: board5[2]
+	Term: board5[3]
+	Term: board5[4]
+	Term: board5[5]
+	Term: hole1[0]
+	Term: hole1[1]
+	Term: hole1[2]
+	Term: hole1[3]
+	Term: hole1[4]
+	Term: hole1[5]
+	Term: hole2[0]
+	Term: hole2[1]
+	Term: hole2[2]
+	Term: hole2[3]
+	Term: hole2[4]
+	Term: hole2[5]
+
+
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 14 |    50 |    12 | LVCMOS33(12)                                                           |                                          |        |  +3.30 |    YES |     |
+| 16 |    12 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    24 |    12 | LVCMOS33(12)                                                           |                                          |        |  +3.30 |    YES |     |
+| 35 |    20 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   106 |    24 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 14     | btnR                 | LVCMOS33        | IOB_X0Y16            | T17                  |                      |
+|        | led[0]               | LVCMOS33        | IOB_X0Y3             | U16                  |                      |
+|        | led[1]               | LVCMOS33        | IOB_X0Y43            | E19                  |                      |
+|        | led[2]               | LVCMOS33        | IOB_X0Y20            | U19                  |                      |
+|        | led[3]               | LVCMOS33        | IOB_X0Y19            | V19                  |                      |
+|        | led[4]               | LVCMOS33        | IOB_X0Y18            | W18                  |                      |
+|        | led[5]               | LVCMOS33        | IOB_X0Y4             | U15                  |                      |
+|        | led[6]               | LVCMOS33        | IOB_X0Y0             | U14                  |                      |
+|        | sw[0]                | LVCMOS33        | IOB_X0Y11            | V17                  | *                    |
+|        | sw[1]                | LVCMOS33        | IOB_X0Y12            | V16                  |                      |
+|        | sw[2]                | LVCMOS33        | IOB_X0Y10            | W16                  |                      |
+|        | sw[3]                | LVCMOS33        | IOB_X0Y9             | W17                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 34     | an[0]                | LVCMOS33        | IOB_X1Y31            | U2                   |                      |
+|        | an[1]                | LVCMOS33        | IOB_X1Y28            | U4                   |                      |
+|        | an[2]                | LVCMOS33        | IOB_X1Y27            | V4                   |                      |
+|        | an[3]                | LVCMOS33        | IOB_X1Y25            | W4                   |                      |
+|        | clk                  | LVCMOS33        | IOB_X1Y26            | W5                   |                      |
+|        | seg[0]               | LVCMOS33        | IOB_X1Y24            | W7                   |                      |
+|        | seg[1]               | LVCMOS33        | IOB_X1Y23            | W6                   |                      |
+|        | seg[2]               | LVCMOS33        | IOB_X1Y22            | U8                   |                      |
+|        | seg[3]               | LVCMOS33        | IOB_X1Y21            | V8                   |                      |
+|        | seg[4]               | LVCMOS33        | IOB_X1Y18            | U5                   |                      |
+|        | seg[5]               | LVCMOS33        | IOB_X1Y17            | V5                   |                      |
+|        | seg[6]               | LVCMOS33        | IOB_X1Y12            | U7                   |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d09e1a59
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.660 . Memory (MB): peak = 1128.742 ; gain = 4.164
+Phase 1 Placer Initialization | Checksum: d09e1a59
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.661 . Memory (MB): peak = 1128.742 ; gain = 4.164
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: d09e1a59
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.662 . Memory (MB): peak = 1128.742 ; gain = 4.164
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 37 Warnings, 21 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 17 13:17:58 2026...
