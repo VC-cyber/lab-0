@@ -15,12 +15,12 @@ module keypad_reader #(
 );
     reg [16:0] scan_counter;
     reg [1:0] column;
-    assign col = ~(4'b1000 >> column);
+    assign col = ~(4'b0001 >> column);
 
     // Synchronize the four keypad row signals.
     reg [3:0] row1, row2;
     always @(posedge clk) begin
-        row1 <= {row[0], row[1], row[2], row[3]};
+        row1 <= row;
         row2 <= row1;
     end
 
