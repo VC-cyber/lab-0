@@ -1,0 +1,4 @@
+Running: xsim.dir/poker_top_behav/xsimk.exe -simmode gui -wdb poker_top_behav.wdb -simrunnum 0 -socket 50158
+Design successfully loaded
+Design Loading Memory Usage: 8704 KB (Peak: 8704 KB)
+Design Loading CPU Usage: 46 ms
