@@ -14,23 +14,65 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2888 
+INFO: Helper process launched with PID 16360 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.438 ; gain = 99.914
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.301 ; gain = 99.699
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'poker_top' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_top.v:4]
-INFO: [Synth 8-6157] synthesizing module 'inputs' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/inputs.v:7]
+INFO: [Synth 8-6157] synthesizing module 'inputs' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/inputs.v:9]
 	Parameter SCAN_CYCLES bound to: 100000 - type: integer 
 	Parameter DEBOUNCE_FRAMES bound to: 3 - type: integer 
+	Parameter BUTTON_DEBOUNCE_CYCLES bound to: 2000000 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'keypad_reader' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/keypad_reader.v:5]
 	Parameter SCAN_CYCLES bound to: 100000 - type: integer 
 	Parameter DEBOUNCE_FRAMES bound to: 3 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/keypad_reader.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'keypad_reader' (1#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/keypad_reader.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inputs' (2#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/inputs.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'poker_top' (3#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_top.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'inputs' (2#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/inputs.v:9]
+INFO: [Synth 8-6157] synthesizing module 'simulation_engine' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:233]
+	Parameter NUM_SIMS bound to: 10000 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter INIT_DEAL bound to: 1 - type: integer 
+	Parameter DEAL bound to: 2 - type: integer 
+	Parameter EVAL_START bound to: 3 - type: integer 
+	Parameter EVAL_WAIT bound to: 4 - type: integer 
+	Parameter ADD_RESULT bound to: 5 - type: integer 
+	Parameter NEXT_GAME bound to: 6 - type: integer 
+	Parameter FINISH bound to: 7 - type: integer 
+	Parameter DIV_WIN bound to: 8 - type: integer 
+	Parameter DIV_EQUITY bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'hand_evaluator' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:20]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter BUILD bound to: 1 - type: integer 
+	Parameter CHECK_FLUSH bound to: 2 - type: integer 
+	Parameter HASH_READ bound to: 3 - type: integer 
+	Parameter HASH_ADD bound to: 4 - type: integer 
+	Parameter ROM_READ bound to: 5 - type: integer 
+	Parameter ROM_RESULT bound to: 6 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:50]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:51]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:52]
+INFO: [Synth 8-3876] $readmem data file 'hash_offsets.mem' is read successfully [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:54]
+INFO: [Synth 8-3876] $readmem data file 'noflush7.mem' is read successfully [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:55]
+INFO: [Synth 8-3876] $readmem data file 'flush7.mem' is read successfully [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'hand_evaluator' (3#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'simulation_engine' (4#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:233]
+INFO: [Synth 8-6157] synthesizing module 'probability_display' [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:513]
+INFO: [Synth 8-6155] done synthesizing module 'probability_display' (5#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:513]
+INFO: [Synth 8-6155] done synthesizing module 'poker_top' (6#1) [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_top.v:4]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[14]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[13]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[12]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[11]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[10]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[9]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[8]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[7]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[6]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[5]
+WARNING: [Synth 8-3331] design inputs has unconnected port sw[4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.754 ; gain = 155.230
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 461.059 ; gain = 204.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -43,10 +85,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.754 ; gain = 155.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 461.059 ; gain = 204.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.754 ; gain = 155.230
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 461.059 ; gain = 204.457
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -54,44 +96,11 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:68]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Student/lab-0/project_4/project_4.srcs/constrs_1/imports/src/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/poker_top_propImpl.xdc].
@@ -101,22 +110,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 746.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 799.230 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 799.230 ; gain = 542.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 799.230 ; gain = 542.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 799.230 ; gain = 542.629
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "column" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "frame_key" won't be mapped to RAM because it is too sparse
@@ -136,11 +145,85 @@ INFO: [Synth 8-5544] ROM "cards_reg[3]" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "cards_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cards_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cards_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "left_stable" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "digits" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "digits" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tens" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "player_pending" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "player_digit" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "card_index" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_index" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "hash_offsets" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "noflush_rom" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "flush_rom" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6014] Unused sequential element offset_value_reg was removed.  [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:130]
+WARNING: [Synth 8-6014] Unused sequential element nonflush_value_reg was removed.  [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:131]
+WARNING: [Synth 8-6014] Unused sequential element flush_value_reg was removed.  [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:132]
+INFO: [Synth 8-5544] ROM "rank_count_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_count_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit_count_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "card_index" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_index" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "suit" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rank_weight" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sim_board_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sim_board_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sim_board_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sim_board_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sim_board_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ready" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 799.230 ; gain = 542.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -153,32 +236,85 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 11    
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 8     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 6     
 	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
 +---Registers : 
+	               52 Bit    Registers := 1     
+	               45 Bit    Registers := 1     
+	               42 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               31 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	                6 Bit    Registers := 7     
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 9     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 22    
 	                5 Bit    Registers := 3     
-	                4 Bit    Registers := 6     
-	                3 Bit    Registers := 1     
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 23    
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---ROMs : 
+	                              ROMs := 3     
 +---Muxes : 
+	   2 Input     52 Bit        Muxes := 10    
+	  10 Input     52 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	  10 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   8 Input     31 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 2     
 	   2 Input     17 Bit        Muxes := 1     
-	  12 Input      7 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 5     
+	   8 Input     13 Bit        Muxes := 4     
+	   4 Input     13 Bit        Muxes := 1     
+	  10 Input     13 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	  10 Input     10 Bit        Muxes := 2     
+	  12 Input      7 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   8 Input      6 Bit        Muxes := 1     
+	  10 Input      6 Bit        Muxes := 5     
 	  17 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 8     
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 10    
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 22    
+	   8 Input      4 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 13    
+	   4 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 3     
+	   9 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 23    
-	   4 Input      1 Bit        Muxes := 9     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 76    
+	   4 Input      1 Bit        Muxes := 15    
 	   5 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 19    
+	   8 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 27    
+	  11 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -188,9 +324,14 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module poker_top 
 Detailed RTL Component Info : 
++---Registers : 
+	               45 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module keypad_reader 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -210,23 +351,112 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 3     
 Module inputs 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	               21 Bit    Registers := 1     
 	                6 Bit    Registers := 7     
-	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 +---Muxes : 
+	   2 Input     21 Bit        Muxes := 2     
 	  12 Input      7 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 9     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 11    
+	   2 Input      3 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 20    
+	   4 Input      1 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 37    
 	   5 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
+Module hand_evaluator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 8     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 18    
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   8 Input     31 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 5     
+	   8 Input     13 Bit        Muxes := 4     
+	   4 Input     13 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   8 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   8 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 5     
+Module simulation_engine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 11    
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
++---Registers : 
+	               52 Bit    Registers := 1     
+	               42 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 15    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     52 Bit        Muxes := 10    
+	  10 Input     52 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	  10 Input     32 Bit        Muxes := 2     
+	  10 Input     13 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	  10 Input     10 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 3     
+	   8 Input      6 Bit        Muxes := 1     
+	  10 Input      6 Bit        Muxes := 5     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 25    
+	  10 Input      1 Bit        Muxes := 27    
+	  11 Input      1 Bit        Muxes := 1     
+Module probability_display 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      7 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -243,15 +473,119 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "card_inputs/keypad/column" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "card_inputs/keypad/detected" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "card_inputs/keypad/frame_key" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'card_inputs/keypad/frames_reg[2]' (FDCE) to 'card_inputs/keypad/frames_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\card_inputs/keypad/frames_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (card_inputs/keypad/frames_reg[3]) is unused and will be removed from module poker_top.
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "opp_cards_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "opp_cards_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP win_dividend0, operation Mode is: (C:0x1388)+A*(B:0x3e8).
+DSP Report: operator win_dividend0 is absorbed into DSP win_dividend0.
+DSP Report: operator win_dividend1 is absorbed into DSP win_dividend0.
+DSP Report: Generating DSP equity_dividend0, operation Mode is: (C:0x493e0)+A*(B:0x3e8).
+DSP Report: operator equity_dividend0 is absorbed into DSP equity_dividend0.
+DSP Report: operator equity_dividend1 is absorbed into DSP equity_dividend0.
+INFO: [Synth 8-5546] ROM "game_inputs/keypad/column" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "game_inputs/keypad/detected" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "game_inputs/keypad/frame_key" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_inputs/left_stable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (simulator/evaluator/\state_reg[3] )
+INFO: [Synth 8-3886] merging instance 'game_inputs/keypad/frames_reg[2]' (FDCE) to 'game_inputs/keypad/frames_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game_inputs/keypad/frames_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (state_reg[3]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[30]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[29]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[28]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[27]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[26]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[25]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[24]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[23]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[22]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[21]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[20]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[19]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[18]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[17]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[16]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[15]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[14]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[13]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[12]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[11]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[10]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[9]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[8]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[7]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[6]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[5]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[4]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[3]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[2]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[1]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (base5_key_reg[0]) is unused and will be removed from module hand_evaluator.
+WARNING: [Synth 8-3332] Sequential element (win_dividend_reg[2]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (win_dividend_reg[1]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (win_dividend_reg[0]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (equity_dividend_reg[4]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (equity_dividend_reg[3]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (equity_dividend_reg[2]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (equity_dividend_reg[1]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (equity_dividend_reg[0]) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (busy_reg) is unused and will be removed from module simulation_engine.
+WARNING: [Synth 8-3332] Sequential element (game_inputs/keypad/frames_reg[3]) is unused and will be removed from module poker_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 799.230 ; gain = 542.629
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------+--------------------+---------------+----------------+
+|Module Name    | RTL Object         | Depth x Width | Implemented As | 
++---------------+--------------------+---------------+----------------+
+|hand_evaluator | offset_value_reg   | 1024x16       | Block RAM      | 
+|hand_evaluator | nonflush_value_reg | 65536x13      | Block RAM      | 
+|hand_evaluator | flush_value_reg    | 8192x13       | Block RAM      | 
++---------------+--------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|simulation_engine | (C:0x1388)+A*(B:0x3e8)  | 14     | 10     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|simulation_engine | (C:0x493e0)+A*(B:0x3e8) | 20     | 10     | 19     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_58/offset_value_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_62/nonflush_value_reg_1_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_77/flush_value_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_77/flush_value_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_77/flush_value_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/i_77/flush_value_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -262,13 +596,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 746.035 ; gain = 489.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 880.516 ; gain = 623.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 758.410 ; gain = 501.887
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 972.629 ; gain = 716.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -279,8 +613,28 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:314]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v:314]
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/offset_value_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/nonflush_value_reg_1_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/flush_value_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/flush_value_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/flush_value_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance simulator/evaluator/flush_value_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,7 +658,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -317,7 +671,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,25 +683,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -360,40 +714,77 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     8|
-|3     |LUT1   |     7|
-|4     |LUT2   |    12|
-|5     |LUT3   |     7|
-|6     |LUT4   |    24|
-|7     |LUT5   |    16|
-|8     |LUT6   |    68|
-|9     |FDCE   |   109|
-|10    |FDPE   |     3|
-|11    |FDRE   |     8|
-|12    |IBUF   |    10|
-|13    |OBUF   |    22|
-+------+-------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |    89|
+|3     |DSP48E1     |     2|
+|4     |LUT1        |    55|
+|5     |LUT2        |   142|
+|6     |LUT3        |   276|
+|7     |LUT4        |   136|
+|8     |LUT5        |   161|
+|9     |LUT6        |   706|
+|10    |MUXF7       |    16|
+|11    |MUXF8       |     3|
+|12    |RAMB18E1    |     1|
+|13    |RAMB18E1_1  |     1|
+|14    |RAMB36E1    |     1|
+|15    |RAMB36E1_1  |     1|
+|16    |RAMB36E1_10 |     1|
+|17    |RAMB36E1_11 |     1|
+|18    |RAMB36E1_12 |     1|
+|19    |RAMB36E1_13 |     1|
+|20    |RAMB36E1_14 |     1|
+|21    |RAMB36E1_15 |     1|
+|22    |RAMB36E1_16 |     1|
+|23    |RAMB36E1_17 |     1|
+|24    |RAMB36E1_18 |     1|
+|25    |RAMB36E1_19 |     1|
+|26    |RAMB36E1_2  |     1|
+|27    |RAMB36E1_20 |     1|
+|28    |RAMB36E1_21 |     1|
+|29    |RAMB36E1_22 |     1|
+|30    |RAMB36E1_23 |     1|
+|31    |RAMB36E1_24 |     1|
+|32    |RAMB36E1_25 |     1|
+|33    |RAMB36E1_26 |     1|
+|34    |RAMB36E1_27 |     1|
+|35    |RAMB36E1_28 |     1|
+|36    |RAMB36E1_3  |     1|
+|37    |RAMB36E1_4  |     1|
+|38    |RAMB36E1_5  |     1|
+|39    |RAMB36E1_6  |     1|
+|40    |RAMB36E1_7  |     1|
+|41    |RAMB36E1_8  |     1|
+|42    |RAMB36E1_9  |     1|
+|43    |FDCE        |   735|
+|44    |FDPE        |    38|
+|45    |FDRE        |    24|
+|46    |IBUF        |    14|
+|47    |OBUF        |    23|
++------+------------+------+
 
 Report Instance Areas: 
-+------+--------------+--------------+------+
-|      |Instance      |Module        |Cells |
-+------+--------------+--------------+------+
-|1     |top           |              |   295|
-|2     |  card_inputs |inputs        |   259|
-|3     |    keypad    |keypad_reader |   133|
-+------+--------------+--------------+------+
++------+---------------+--------------------+------+
+|      |Instance       |Module              |Cells |
++------+---------------+--------------------+------+
+|1     |top            |                    |  2452|
+|2     |  game_inputs  |inputs              |   752|
+|3     |    keypad     |keypad_reader       |   150|
+|4     |  odds_display |probability_display |    30|
+|5     |  simulator    |simulation_engine   |  1573|
+|6     |    evaluator  |hand_evaluator      |   544|
++------+---------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.770 ; gain = 508.246
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 764.770 ; gain = 173.965
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 764.770 ; gain = 508.246
+Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 983.293 ; gain = 388.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 983.293 ; gain = 726.691
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 155 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -401,11 +792,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 14 Warnings, 13 Critical Warnings and 0 Errors encountered.
+179 Infos, 58 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 764.770 ; gain = 521.117
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 983.293 ; gain = 739.402
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/lab-0/project_4/project_4.runs/synth_1/poker_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file poker_top_utilization_synth.rpt -pb poker_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 764.770 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:43:07 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 983.293 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 13:44:17 2026...

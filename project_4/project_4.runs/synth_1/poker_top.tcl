@@ -29,9 +29,15 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Student/lab-0/project_4/project_4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_mem {
+  C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/noflush7.mem
+  C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/flush7.mem
+  C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/hash_offsets.mem
+}
 read_verilog -library xil_defaultlib {
   C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/inputs.v
   C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/keypad_reader.v
+  C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_engine.v
   C:/Users/Student/lab-0/project_4/project_4.srcs/sources_1/new/poker_top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

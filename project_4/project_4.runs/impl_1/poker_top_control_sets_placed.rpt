@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Nov 19 12:43:49 2026
+| Date         : Thu Nov 19 13:45:41 2026
 | Host         : CS152A-08 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file poker_top_control_sets_placed.rpt
 | Design       : poker_top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    15 |
-| Unused register locations in slices containing registers |    48 |
+| Number of unique control sets                            |    65 |
+| Unused register locations in slices containing registers |   198 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,11 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      8 |            3 |
+|      2 |            3 |
+|      4 |            3 |
+|      6 |            6 |
+|      8 |            7 |
 |     10 |            2 |
-|     12 |            7 |
+|     12 |           18 |
 |     14 |            1 |
-|    16+ |            2 |
+|    16+ |           25 |
 +--------+--------------+
 
 
@@ -48,11 +51,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            3 |
-| No           | No                    | Yes                    |              82 |           12 |
+| No           | No                    | No                     |              48 |            6 |
+| No           | No                    | Yes                    |             490 |           90 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             142 |           21 |
+| Yes          | No                    | Yes                    |            1056 |          164 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -60,24 +63,74 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------------------------------+------------------+------------------+----------------+
-|  Clock Signal  |             Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------+---------------------------------------+------------------+------------------+----------------+
-|  clk_IBUF_BUFG | card_inputs/keypad/key                | btnR_IBUF        |                1 |              8 |
-|  clk_IBUF_BUFG | card_inputs/keypad/ones_reg[0][0]     | btnR_IBUF        |                1 |              8 |
-|  clk_IBUF_BUFG | card_inputs/keypad/tens_reg[0][0]     | btnR_IBUF        |                1 |              8 |
-|  clk_IBUF_BUFG | card_inputs/keypad/stable_key_0       | btnR_IBUF        |                1 |             10 |
-|  clk_IBUF_BUFG | card_inputs/keypad/last_key_2         | btnR_IBUF        |                1 |             10 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[2][0][0] | btnR_IBUF        |                2 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[5][0][0] | btnR_IBUF        |                2 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[3][0][0] | btnR_IBUF        |                1 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[0][0][0] | btnR_IBUF        |                1 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/E[0]               | btnR_IBUF        |                2 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[1][0][0] | btnR_IBUF        |                2 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/cards_reg[4][0][0] | btnR_IBUF        |                2 |             12 |
-|  clk_IBUF_BUFG | card_inputs/keypad/column_3           | btnR_IBUF        |                4 |             14 |
-|  clk_IBUF_BUFG |                                       |                  |                3 |             16 |
-|  clk_IBUF_BUFG |                                       | btnR_IBUF        |               12 |             82 |
-+----------------+---------------------------------------+------------------+------------------+----------------+
++----------------+--------------------------------------------+------------------------------------+------------------+----------------+
+|  Clock Signal  |                Enable Signal               |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------------+------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                            | simulator/game_inputs/btnR0        |                1 |              2 |
+|  clk_IBUF_BUFG |                                            | simulator/opp_cards_reg[7][3]_0[0] |                1 |              2 |
+|  clk_IBUF_BUFG | simulator/evaluator/E[0]                   | simulator/used_cards[50]_i_2_n_0   |                1 |              2 |
+|  clk_IBUF_BUFG | simulator/opp_cards[7][5]_i_1_n_0          | simulator/draw_index[3]_i_3_n_0    |                1 |              4 |
+|  clk_IBUF_BUFG | simulator/evaluator/state_reg[0]_0[0]      | simulator/opp_cards_reg[7][3]_0[0] |                2 |              4 |
+|  clk_IBUF_BUFG | simulator/evaluator/state_reg[0]_0[0]      | simulator/draw_index[3]_i_3_n_0    |                2 |              4 |
+|  clk_IBUF_BUFG | simulator/opp_cards[1][5]_i_1_n_0          | simulator/opp_cards_reg[7][3]_0[0] |                1 |              6 |
+|  clk_IBUF_BUFG | simulator/opp_cards[3][5]_i_1_n_0          | simulator/opp_cards_reg[7][3]_0[0] |                1 |              6 |
+|  clk_IBUF_BUFG | simulator/opp_cards[3][5]_i_1_n_0          | simulator/draw_index[3]_i_3_n_0    |                1 |              6 |
+|  clk_IBUF_BUFG | simulator/opp_cards[1][5]_i_1_n_0          | simulator/draw_index[3]_i_3_n_0    |                1 |              6 |
+|  clk_IBUF_BUFG | simulator/opp_cards[5][5]_i_1_n_0          | simulator/draw_index[3]_i_3_n_0    |                1 |              6 |
+|  clk_IBUF_BUFG | simulator/opp_cards[5][5]_i_1_n_0          | simulator/opp_cards_reg[7][3]_0[0] |                1 |              6 |
+|  clk_IBUF_BUFG | game_inputs/keypad/key                     | simulator/AR[0]                    |                2 |              8 |
+|  clk_IBUF_BUFG | simulator/draw_index                       | simulator/draw_index[3]_i_3_n_0    |                1 |              8 |
+|  clk_IBUF_BUFG | simulator/opp_cards[7][5]_i_1_n_0          | simulator/opp_cards_reg[7][3]_0[0] |                1 |              8 |
+|  clk_IBUF_BUFG | simulator/evaluator/rank_index[3]_i_1_n_0  | simulator/evaluator/rst0           |                2 |              8 |
+|  clk_IBUF_BUFG | game_inputs/keypad/E[0]                    | btnR_IBUF                          |                1 |              8 |
+|  clk_IBUF_BUFG | game_inputs/keypad/ones_reg[0][0]          | btnR_IBUF                          |                1 |              8 |
+|  clk_IBUF_BUFG | game_inputs/keypad/player_digit_reg[0][0]  | btnR_IBUF                          |                1 |              8 |
+|  clk_IBUF_BUFG | game_inputs/keypad/last_key_1              | simulator/AR[0]                    |                1 |             10 |
+|  clk_IBUF_BUFG | game_inputs/keypad/stable_key_2            | simulator/AR[0]                    |                2 |             10 |
+|  clk_IBUF_BUFG | simulator/opp_cards[6][5]_i_1_n_0          | simulator/AR[0]                    |                1 |             12 |
+|  clk_IBUF_BUFG | simulator/opp_cards[4][5]_i_1_n_0          | simulator/used_cards[50]_i_2_n_0   |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/opp_cards[8][5]_i_1_n_0          | simulator/AR[0]                    |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/sim_board                        | simulator/game_inputs/btnR0        |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/opp_cards[0][5]_i_1_n_0          | simulator/used_cards[50]_i_2_n_0   |                1 |             12 |
+|  clk_IBUF_BUFG | simulator/sim_board[1][5]_i_1_n_0          | simulator/game_inputs/btnR0        |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/sim_board[2][5]_i_1_n_0          | simulator/game_inputs/btnR0        |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/sim_board[3][5]_i_1_n_0          | simulator/game_inputs/btnR0        |                1 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[1][0][0]      | btnR_IBUF                          |                2 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[2][0][0]      | btnR_IBUF                          |                1 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[4][0][0]      | btnR_IBUF                          |                2 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[5][0][0]      | btnR_IBUF                          |                1 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[6][0][0]      | btnR_IBUF                          |                2 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[0][0][0]      | btnR_IBUF                          |                1 |             12 |
+|  clk_IBUF_BUFG | simulator/sim_board[4][5]_i_1_n_0          | simulator/game_inputs/btnR0        |                2 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/cards_reg[3][0][0]      | btnR_IBUF                          |                2 |             12 |
+|  clk_IBUF_BUFG | simulator/opp_cards[2][5]_i_1_n_0          | simulator/used_cards[50]_i_2_n_0   |                1 |             12 |
+|  clk_IBUF_BUFG | simulator/opp_cards[9][5]_i_1_n_0          | simulator/opp_cards_reg[7][3]_0[0] |                1 |             12 |
+|  clk_IBUF_BUFG | game_inputs/keypad/column_3                | simulator/AR[0]                    |                3 |             14 |
+|  clk_IBUF_BUFG | game_inputs/calculate_reg[0]               | simulator/AR[0]                    |                2 |             18 |
+|  clk_IBUF_BUFG | game_inputs/E[0]                           | simulator/draw_index[3]_i_3_n_0    |                3 |             20 |
+|  clk_IBUF_BUFG | game_inputs/equity_tenths_reg[9][0]        | simulator/draw_index[3]_i_3_n_0    |                4 |             20 |
+|  clk_IBUF_BUFG | simulator/E[0]                             | simulator/used_cards[50]_i_2_n_0   |                3 |             22 |
+|  clk_IBUF_BUFG | simulator/evaluator/E[0]                   | simulator/AR[0]                    |                2 |             26 |
+|  clk_IBUF_BUFG | simulator/evaluator/done_i_1_n_0           | simulator/evaluator/rst0           |                4 |             26 |
+|  clk_IBUF_BUFG | simulator/evaluator/flush_mask[12]_i_1_n_0 | simulator/evaluator/rst0           |                8 |             26 |
+|  clk_IBUF_BUFG | simulator/simulations_done                 | simulator/opp_cards_reg[7][3]_0[0] |                4 |             28 |
+|  clk_IBUF_BUFG | simulator/wins[0]_i_1_n_0                  | simulator/opp_cards_reg[7][3]_0[0] |                4 |             28 |
+|  clk_IBUF_BUFG | simulator/evaluator/suit_count_reg[1]0     | simulator/evaluator/rst0           |                7 |             32 |
+|  clk_IBUF_BUFG | simulator/evaluator/suit_count_reg[3]0     | simulator/evaluator/rst0           |                7 |             32 |
+|  clk_IBUF_BUFG | simulator/evaluator/suit_count_reg[2]0     | simulator/evaluator/rst0           |                8 |             32 |
+|  clk_IBUF_BUFG | simulator/evaluator/suit_count_reg[0]0     | simulator/evaluator/rst0           |                4 |             32 |
+|  clk_IBUF_BUFG | simulator/E[0]                             | simulator/opp_cards_reg[7][3]_0[0] |                5 |             36 |
+|  clk_IBUF_BUFG | simulator/simulations_done                 | simulator/used_cards[50]_i_2_n_0   |                5 |             40 |
+|  clk_IBUF_BUFG |                                            | simulator/AR[0]                    |                9 |             44 |
+|  clk_IBUF_BUFG |                                            |                                    |                6 |             48 |
+|  clk_IBUF_BUFG | simulator/equity_dividend_reg[31]_0[0]     | simulator/AR[0]                    |                7 |             54 |
+|  clk_IBUF_BUFG | simulator/evaluator/remaining[3]_i_1_n_0   | simulator/evaluator/rst0           |               13 |             72 |
+|  clk_IBUF_BUFG | game_inputs/calculate_reg[0]               | simulator/opp_cards_reg[7][3]_0[0] |                7 |             72 |
+|  clk_IBUF_BUFG | simulator/eval_start                       | simulator/game_inputs/btnR0        |               12 |             84 |
+|  clk_IBUF_BUFG |                                            | simulator/evaluator/rst0           |               24 |             92 |
+|  clk_IBUF_BUFG |                                            | btnR_IBUF                          |               19 |            108 |
+|  clk_IBUF_BUFG |                                            | simulator/used_cards[50]_i_2_n_0   |               17 |            108 |
+|  clk_IBUF_BUFG |                                            | simulator/draw_index[3]_i_3_n_0    |               19 |            134 |
++----------------+--------------------------------------------+------------------------------------+------------------+----------------+
 
 

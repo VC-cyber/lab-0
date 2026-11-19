@@ -75,8 +75,8 @@ module hand_evaluator (
     // These are constants and subtractors; no division or modulus hardware.
     reg [1:0] suit;
     reg [3:0] rank_in_suit;
-    reg [3:0] rank_order; // 0 = A, 1 = K ... 12 = 2
-    reg [3:0] rank_bit;   // 12 = A, 11 = K ... 0 = 2
+    reg [3:0] rank_order;
+    reg [3:0] rank_bit;
     always @(*) begin
         if (current_card <= 13) begin
             suit = 0;
@@ -100,7 +100,6 @@ module hand_evaluator (
         end
     end
 
-    // Fixed powers of 5 for ranks 2...Ace.
     reg [30:0] rank_weight;
     always @(*) begin
         case (rank_in_suit)
