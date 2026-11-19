@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1794950246">
-  <File Type="BITSTR-BMM" Name="inputs_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="inputs_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="inputs_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="inputs_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="inputs.tcl"/>
-  <File Type="OPT-TIMING" Name="inputs_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="inputs_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="inputs_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="inputs_reports.tcl"/>
-  <File Type="OPT-DRC" Name="inputs_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="inputs.hwdef"/>
-  <File Type="PWROPT-DCP" Name="inputs_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="inputs_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="inputs_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="inputs_placed.dcp"/>
-  <File Type="PLACE-IO" Name="inputs_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="inputs_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="inputs_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="inputs_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="inputs_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="inputs_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="inputs_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="inputs.bgn"/>
-  <File Type="PLACE-TIMING" Name="inputs_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="inputs_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="inputs.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="inputs_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="inputs_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="inputs_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="inputs.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="inputs_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="inputs_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="inputs_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="inputs_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="inputs_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="inputs_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1795119359">
+  <File Type="BITSTR-BMM" Name="poker_top_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="poker_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="poker_top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="poker_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="poker_top.tcl"/>
+  <File Type="OPT-TIMING" Name="poker_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="poker_top_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="poker_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="poker_top_reports.tcl"/>
+  <File Type="OPT-DRC" Name="poker_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="poker_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="poker_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="poker_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="poker_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="poker_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="poker_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="poker_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="poker_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="poker_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="poker_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="poker_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="poker_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="poker_top.bgn"/>
+  <File Type="PLACE-TIMING" Name="poker_top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="poker_top_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="poker_top.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="poker_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="poker_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="poker_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="poker_top.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="poker_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="poker_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="poker_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="poker_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="poker_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="poker_top_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="inputs.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="inputs_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="inputs.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="inputs_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="inputs_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="inputs.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="inputs_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="inputs_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="inputs_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="inputs_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="inputs_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="inputs_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="inputs_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="inputs_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="inputs_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="inputs_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="inputs_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="inputs_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="inputs_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="inputs_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="inputs_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="inputs_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="inputs_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="inputs_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="inputs_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="inputs.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="inputs_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="inputs.rbt"/>
-  <File Type="BITSTR-NKY" Name="inputs.nky"/>
-  <File Type="BG-DRC" Name="inputs.drc"/>
-  <File Type="RDI-RDI" Name="inputs.vdi"/>
+  <File Type="BITSTR-LTX" Name="poker_top.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="poker_top_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="poker_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="poker_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="poker_top_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="poker_top.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="poker_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="poker_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="poker_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="poker_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="poker_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="poker_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="poker_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="poker_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="poker_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="poker_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="poker_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="poker_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="poker_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="poker_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="poker_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="poker_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="poker_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="poker_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="poker_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="poker_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="poker_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="poker_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="poker_top.nky"/>
+  <File Type="BG-DRC" Name="poker_top.drc"/>
+  <File Type="RDI-RDI" Name="poker_top.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -78,10 +78,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/keypad_reader.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/poker_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="inputs"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="poker_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -99,9 +112,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
